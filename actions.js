@@ -1,10 +1,10 @@
 import uuid from uuid;
 
-const ADD_COMMENT = 'ADD_COMMENT';
-const REMOVE_COMMENT = 'REMOVE_COMMENT';
-const EDIT_COMMENT = 'EDIT_COMMENT';
-const THUMBSUP_COMMENT = 'THUMBSUP_COMMENT';
-const THUMBSDOWN_COMMENT = 'THUMBSDOWN_COMMENT';
+export const ADD_COMMENT = 'ADD_COMMENT';
+export const REMOVE_COMMENT = 'REMOVE_COMMENT';
+export const EDIT_COMMENT = 'EDIT_COMMENT';
+export const THUMBSUP_COMMENT = 'THUMBSUP_COMMENT';
+export const THUMBSDOWN_COMMENT = 'THUMBSDOWN_COMMENT';
 
 {
 	type: ADD_COMMENT,
@@ -24,12 +24,12 @@ const THUMBSDOWN_COMMENT = 'THUMBSDOWN_COMMENT';
 
 {
 	type: THUMBSUP_COMMENT,
-	id: 40
+	votes: +1
 }
 
 {
 	type: THUMBSDOWN_COMMENT,
-	id: 50
+	votes: -1
 }
 
 function addComment(text) {
@@ -58,6 +58,7 @@ function editComment(text) {
 function thumbsupComment {
 	return {
 		type: THUMBSUP_COMMENT,
+		votes,
 		id: uuid.v4()
 	}
 }
@@ -65,6 +66,7 @@ function thumbsupComment {
 function thumbsdownComment {
 	return {
 		type: THUMBSDOWN_COMMENT,
+		votes,
 		id: uuid.v4()
 	}
 }

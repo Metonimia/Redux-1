@@ -3,34 +3,8 @@ import uuid from uuid;
 export const ADD_COMMENT = 'ADD_COMMENT';
 export const REMOVE_COMMENT = 'REMOVE_COMMENT';
 export const EDIT_COMMENT = 'EDIT_COMMENT';
-export const THUMBSUP_COMMENT = 'THUMBSUP_COMMENT';
-export const THUMBSDOWN_COMMENT = 'THUMBSDOWN_COMMENT';
-
-{
-	type: ADD_COMMENT,
-	text: 'My comment'
-}
-
-{
-	type: REMOVE_COMMENT,
-	id: 20
-}
-
-{
-	type: EDIT_COMMENT,
-	id: 30,
-	text: 'My edited comment'
-}
-
-{
-	type: THUMBSUP_COMMENT,
-	votes: +1
-}
-
-{
-	type: THUMBSDOWN_COMMENT,
-	votes: -1
-}
+export const THUMBS_UP_COMMENT = 'THUMBS_UP_COMMENT';
+export const THUMBS_DOWN_COMMENT = 'THUMBS_DOWN_COMMENT';
 
 function addComment(text) {
 	return {
@@ -40,7 +14,7 @@ function addComment(text) {
 	}
 }
 
-function removeComment {
+function removeComment() {
 	return {
 		type: REMOVE_COMMENT,
 		id: uuid.v4()
@@ -55,18 +29,16 @@ function editComment(text) {
 	}
 }
 
-function thumbsupComment {
+function thumbsUpComment() {
 	return {
-		type: THUMBSUP_COMMENT,
-		votes,
+		type: THUMBS_UP_COMMENT,
 		id: uuid.v4()
 	}
 }
 
-function thumbsdownComment {
+function thumbsDownComment() {
 	return {
-		type: THUMBSDOWN_COMMENT,
-		votes,
+		type: THUMBS_DOWN_COMMENT,
 		id: uuid.v4()
 	}
 }

@@ -9,6 +9,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "create-react-app": "^1.5.2",
+    "sudo": "^1.0.3",
     "uuid": "^3.2.1"
   }
 }

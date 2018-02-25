@@ -20,11 +20,11 @@ function comments(state = [], action) {
 			};
 		case THUMBS_UP_COMMENT:
 			return {
-				comments: state.comments.map(comment => (comment.id === action.id) ? { ...comment, votes: votes + 1} : comment)
+				comments: state.comments.map(comment => (comment.id === action.id) ? { ...comment, comments.votes: comments.votes + 1} : comment)
 			};
 		case THUMBS_DOWN_COMMENT:
 			return {
-				comments: state.comments.map(comment => (comment.id === action.id) ? { ...comment, votes: votes - 1} : comment)
+				comments: state.comments.map(comment => (comment.id === action.id) ? { ...comment, comments.votes: comments.votes - 1} : comment)
 			};
 		default:
 			return state;
